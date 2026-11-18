@@ -1,0 +1,48 @@
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1d2433;
+  --muted: #6b7385;
+  --accent: #4f46e5;
+  --border: #e3e6ee;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.container { max-width: 720px; margin: 0 auto; padding: 40px 16px; }
+h1 { margin: 0 0 4px; }
+.muted { color: var(--muted); }
+.error { color: #b42318; }
+.empty { text-align: center; padding: 32px 0; }
+
+.progress { height: 8px; background: var(--border); border-radius: 99px; overflow: hidden; margin: 12px 0 24px; }
+.progress div { height: 100%; background: var(--accent); transition: width 0.3s; }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+
+input, select, button { font: inherit; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; background: #fff; }
+button { background: var(--accent); color: #fff; border: none; cursor: pointer; }
+button.icon { background: transparent; color: var(--muted); }
+button.icon:hover { color: #b42318; }
+
+.task-form { display: flex; gap: 8px; padding: 12px; flex-wrap: wrap; }
+.task-form input:first-child { flex: 1; min-width: 200px; }
+
+.filters { display: flex; gap: 8px; margin: 16px 0; flex-wrap: wrap; }
+.filters input { flex: 1; min-width: 160px; }
+
+.task-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.task { display: flex; align-items: center; gap: 12px; padding: 12px; }
+.task-body { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.task.done .title { text-decoration: line-through; color: var(--muted); }
+.meta { display: flex; gap: 8px; font-size: 0.85rem; color: var(--muted); }
+.overdue { color: #b42318; font-weight: 600; }
+
+.badge { padding: 1px 8px; border-radius: 99px; font-size: 0.75rem; text-transform: capitalize; }
+.badge.low { background: #e7f6ec; color: #1f7a3d; }
+.badge.medium { background: #fff4e0; color: #9a5b00; }
+.badge.high { background: #fde8e8; color: #b42318; }
